@@ -22,11 +22,11 @@ jobs:
       - uses: actions/checkout@v2
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
-      - name: Check Hands_on_I.Rmd
-        run: if [ -e Hands_on_I.Rmd ] ; then exit 0 ; else { echo missing Hands_on_I.Rmd ; exit 1 ; } ; fi
+      - name: Check Hands_on_II.Rmd
+        run: if [ -e Hands_on_II.Rmd ] ; then exit 0 ; else { echo missing Hands_on_II.Rmd ; exit 1 ; } ; fi
       - name: Install rmarkdown
         run: Rscript -e 'install.packages("rmarkdown")'
-      - name: Render Hands_on_I.html
+      - name: Render Hands_on_II.html
         run: Rscript -e 'rmarkdown::render("Hands_on_I.Rmd")'
-      - name: Check Hands_on_I.html
-        run: if [ -e Hands_on_I.html ] ; then exit 0 ; else { echo missing Hands_on_I.html ; exit 1 ; } ; fi
+      - name: Check Hands_on_II.html
+        run: if [ -e Hands_on_II.html ] ; then exit 0 ; else { echo missing Hands_on_II.html ; exit 1 ; } ; fi
