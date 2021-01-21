@@ -1,0 +1,71 @@
+---
+title: "Hands_on_sessions_4_5"
+author: "Janet Piñero (janet.pinero@upf.edu)"
+date: "Last update: `r format(Sys.time(), '%d %B, %Y')`"      
+output:
+  html_document:
+    toc: true
+    fig_caption: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Exercise 1
+With the data from the package dslabs
+Load the tissue_gene_expression dataset
+
+```{r}
+install.packages('curl')
+install.packages("data.table")
+install.packages("dplyr")
+install.packages("dslabs")
+library(dslabs)
+data("tissue_gene_expression")
+```
+
+
+Compute the distance between each observation. Store the result in d.
+Compute the Manhattan distance, and store it in d_m
+
+```{r}
+
+```
+
+Make a hierarchical clustering plot and add the tissue types as labels.
+
+```{r}
+
+```
+
+Run a k-means clustering on the data . Make a table comparing the identified clusters to the actual tissue types. Run the algorithm several times to see how the answer changes.
+
+```{r}
+
+```
+
+Visualize the results of the clustering analysis (Hint: check the factoextra package)
+```{r}
+
+```
+
+Plot a heatmap of the 40 genes with top variance over all samples. Add the information about tissue type as annotation*. From a qualitative point of view, are those genes good at separating tissue types? 
+Your favorite heatmap package clusters the observations. Investigate what method and parameters does the package uses by default. 
+
+
+
+# Exercise 2
+
+The data accompanying the homework-2 in the github repository comes from a toxicology experiment in which a toxic compound was administered to different experimental models: human organoids in vitro, mouse organoids in vitro and mouse in vivo. Two specific tissues were investigated: intestine and colon. For each model, different doses (usually high and low) were tested and RNA was retrieved at different time points (Usually early and late). The files in the repository correspond to normalised, log-transformed read counts for approximately 13,000 genes. Using this data set, answer: 
+How many genes are common to all datasets? And what datasets share the highest number of genes?
+Use clustering techniques to analyze if  the response in human is similar to the response in mouse, and if the response in mouse organoids  (mouse in vitro) is similar  to the response of the mouse in vivo. How about the response in intestine versus colon?
+
+
+
+# session info {.unnumbered}
+
+```{r, results='asis',  echo=FALSE, message=FALSE }
+sessionInfo()
+```
