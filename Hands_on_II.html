@@ -174,30 +174,13 @@ pre code {
 <ul>
 <li><a href="#exercise-1">Exercise 1</a></li>
 <li><a href="#exercise-2">Exercise 2</a></li>
-<li><a href="#exercise-3">Exercise 3</a></li>
 <li><a href="#session-info">session info</a></li>
 </ul>
 </div>
 
 <div id="exercise-1" class="section level1">
 <h1>Exercise 1</h1>
-<p>From the Pima indians dataset, plot using ggplot2: The density plot # Pregnancies Grouped by outcome (in this case, outcome refers to presence of diabetes)</p>
-<p>The density plot of glucose by presence outcome, and next to it, the boxplot of glucose by outcome</p>
-<p>The relationship between glucose and insulin levels colored by outcome</p>
-<p>The relationship between the Skinfold thickness of the triceps and the BMI, using one panel for each outcome</p>
-<p>Save the plot from item d) as a png with 300 dpi quality</p>
-<p>Do not use the colors by default from ggplot2!! Add the plot titles.</p>
-</div>
-<div id="exercise-2" class="section level1">
-<h1>Exercise 2</h1>
-<p>From a dataset of a gene expression microarray (an Affymetrix mouse4302 array) that reports the transcriptomes of around 100 individual cells from mouse embryos at different time points in early development, from the paper of Ohnishi et al. (2014). More details can be found in the paper and in the documentation of the <a href="http://bioconductor.org/packages/release/data/experiment/html/Hiiragi2013.html">Bioconductor data package Hiiragi2013</a>. In the paper the authors divided the cells into 8 biological groups (sampleGroup), based on age, genotype and lineage, and they defined a color scheme to represent these groups (sampleColour). Plot the number of samples for each of the 8 groups using the ggplot function, coloring by the original colors</p>
-<p>Plot the relationship between probes X1426642_at, and X1418765_at. Color the samples by group, and add labels to the points</p>
-<p>Plot the distribution of of probe intensities for one particular sample, cell number 20, which was from day E3.25</p>
-<p>For the probes Fgf4 = “1420085_at”, Gata4 = “1418863_at”, Gata6 = “1425463_at”, and Sox2 = “1416967_at”, plot a barplot of the mean of the expression values across all experiments (* add the error bar to the plot) *Explore boxplots, violin plots and density plots of the levels of expression of the selected probes across all samples</p>
-</div>
-<div id="exercise-3" class="section level1">
-<h1>Exercise 3</h1>
-<p>With the data from the package Hiiragi2013</p>
+<p>From a dataset of a gene expression microarray (an Affymetrix mouse4302 array) that reports the transcriptomes of around 100 individual cells from mouse embryos at different time points in early development, from the paper of Ohnishi et al. (2014). More details can be found in the paper and in the documentation of the <a href="http://bioconductor.org/packages/release/data/experiment/html/Hiiragi2013.html">Bioconductor data package Hiiragi2013</a>.</p>
 <p>Compute the distance between each group. Store the result in d.</p>
 <p>Make a hierarchical clustering plot and add the groups as labels.</p>
 <p>Run a k-means on the data . Make a table comparing the identified clusters to the actual sample groups. Run the algorithm several times to see if the answer changes.</p>
@@ -205,6 +188,14 @@ pre code {
 <p>Compare the clustering results using both methodologies</p>
 <p>Plot a heatmap of the 50 genes with top variance over all samples. Add the information about sample group as annotation to the heatmap*. From a qualitative point of view, are those genes good at separating the groups?</p>
 <p>Your favorite heatmap package clusters the observations. Investigate what method and parameters does the package uses by default.</p>
+</div>
+<div id="exercise-2" class="section level1">
+<h1>Exercise 2</h1>
+<p>Go back to the Hiiragi dataset and</p>
+<p>Perform a PCA on the data and visualize the results (PC1 and PC2, and also, PC3 ). Label the points in the plot with their respective samples</p>
+<p>Visualize the data using the PC1 and PC2 again, but this time, color the observations by cluster, using the k means clusters, with k of your choice. Discuss the result. Produce a caption for the plot</p>
+<p>What are the top 20 genes that contribute to the PC1? Are they the same genes that are more variable according to the exercise from the previous assignment?</p>
+<p>Perform t-SNE and visualize the result. Test at least 2 perplexity values. Compare to the PCA results.</p>
 </div>
 <div id="session-info" class="section level1 unnumbered">
 <h1 class="unnumbered">session info</h1>
