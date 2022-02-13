@@ -14,54 +14,96 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 # Exercise 1
-With the data from the package dslabs
-Load the tissue_gene_expression dataset
-
-```{r}
-install.packages('curl')
-install.packages("data.table")
-install.packages("dplyr")
-install.packages("dslabs")
-library(dslabs)
-data("tissue_gene_expression")
-```
-
-
-Compute the distance between each observation. Store the result in d.
-Compute the Manhattan distance, and store it in d_m
-
+From the Pima indians dataset, plot using ggplot2:
+The density plot # Pregnancies Grouped by outcome (in this case, outcome refers to presence of diabetes)
 ```{r}
 
 ```
 
-Make a hierarchical clustering plot and add the tissue types as labels.
-
+The density plot of glucose by presence outcome, and next to it, the boxplot of glucose by outcome 
 ```{r}
 
 ```
 
-Run a k-means clustering on the data . Make a table comparing the identified clusters to the actual tissue types. Run the algorithm several times to see how the answer changes.
-
+The relationship between glucose and insulin levels colored by outcome
 ```{r}
 
 ```
 
-Visualize the results of the clustering analysis (Hint: check the factoextra package)
+The relationship between the Skinfold thickness of the triceps and the BMI, using one panel for each outcome
 ```{r}
 
 ```
 
-Plot a heatmap of the 40 genes with top variance over all samples. Add the information about tissue type as annotation*. From a qualitative point of view, are those genes good at separating tissue types? 
-Your favorite heatmap package clusters the observations. Investigate what method and parameters does the package uses by default. 
+Save the plot from item d) as a png with 300 dpi quality
+```{r}
+
+```
+
+Do not use the colors by default from ggplot2!! Add the plot titles. 
 
 
 
 # Exercise 2
+From a dataset of a gene expression microarray (an Affymetrix mouse4302 array) that reports the transcriptomes of around 100 individual cells from mouse embryos at different time points in early development, from the paper of Ohnishi et al. (2014). More details can be found in the paper and in the documentation of the [Bioconductor data package Hiiragi2013](http://bioconductor.org/packages/release/data/experiment/html/Hiiragi2013.html). 
+In the paper the authors divided the cells into 8 biological groups (sampleGroup), based on age, genotype and lineage, and they defined a color scheme to represent these groups (sampleColour).  Plot the number of samples for each of the 8 groups using the ggplot function, coloring by the original colors
+```{r}
 
-The data accompanying the homework-2 in the github repository comes from a toxicology experiment in which a toxic compound was administered to different experimental models: human organoids in vitro, mouse organoids in vitro and mouse in vivo. Two specific tissues were investigated: intestine and colon. For each model, different doses (usually high and low) were tested and RNA was retrieved at different time points (Usually early and late). The files in the repository correspond to normalised, log-transformed read counts for approximately 13,000 genes. Using this data set, answer: 
-How many genes are common to all datasets? And what datasets share the highest number of genes?
-Use clustering techniques to analyze if  the response in human is similar to the response in mouse, and if the response in mouse organoids  (mouse in vitro) is similar  to the response of the mouse in vivo. How about the response in intestine versus colon?
+```
 
+Plot the relationship between probes  X1426642_at, and X1418765_at. Color the samples by group, and add labels to the points
+
+```{r}
+
+```
+
+Plot the distribution of of probe intensities for one particular sample, cell number 20, which was from day E3.25
+```{r}
+
+```
+
+For the probes Fgf4 = "1420085_at", Gata4 = "1418863_at",  Gata6 = "1425463_at",  and Sox2 = "1416967_at", plot
+a barplot of the mean of the expression values across all experiments (* add the error bar to the plot)
+*Explore boxplots, violin plots and density plots of the levels of expression of the selected probes across all samples
+
+
+# Exercise 3
+
+With the data from the package Hiiragi2013   
+
+
+Compute the distance between each group. Store the result in d.
+```{r}
+
+```
+
+Make a hierarchical clustering plot and add the groups as labels.
+```{r}
+
+```
+
+Run a k-means on the data . Make a table comparing the identified clusters to the actual sample groups. Run the algorithm several times to see if the answer changes.
+```{r}
+
+```
+
+Visualize the results of the clustering analysis (Hint: check the [factoextra](https://cran.r-project.org/web/packages/factoextra/index.html) package)
+```{r}
+
+```
+
+Compare the clustering results using both methodologies
+```{r}
+
+```
+
+Plot a heatmap of the 50 genes with top variance over all samples. Add the information about sample group as annotation to the heatmap*. From a qualitative point of view, are those genes good at separating the groups? 
+
+```{r}
+
+```
+
+Your favorite heatmap package clusters the observations. Investigate what method and parameters does the package uses by default. 
 
 
 # session info {.unnumbered}
